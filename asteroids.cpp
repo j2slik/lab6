@@ -4,6 +4,7 @@
 //
 //program: asteroids.cpp
 //author:  Gordon Griesel
+//modified by: Jordan Parks
 //date:    2014 - 2018
 //mod spring 2015: added constructors
 //mod spring 2018: X11 wrapper class
@@ -55,6 +56,11 @@ extern struct timespec timeStart, timeCurrent;
 extern double timeDiff(struct timespec *start, struct timespec *end);
 extern void timeCopy(struct timespec *dest, struct timespec *source);
 //-----------------------------------------------------------------------------
+
+//Jordan's source file
+extern void showName();
+
+
 
 class Global {
 public:
@@ -734,8 +740,13 @@ void physics()
 	}
 }
 
+
+//My source file
+    
 void render()
 {
+    //call function
+
 	Rect r;
 	glClear(GL_COLOR_BUFFER_BIT);
 	//
@@ -747,6 +758,14 @@ void render()
 	ggprint8b(&r, 16, 0x00ffff00, "n asteroids: %i", g.nasteroids);
 	ggprint8b(&r, 16, 0x00ffff00, "n asteroids destroyed: ");
 	//
+	//
+
+//call Jordan's source file	
+    showName();
+	
+
+
+
 	//-------------
 	//Draw the ship
 	glColor3fv(g.ship.color);
