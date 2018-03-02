@@ -57,9 +57,6 @@ extern double timeDiff(struct timespec *start, struct timespec *end);
 extern void timeCopy(struct timespec *dest, struct timespec *source);
 //-----------------------------------------------------------------------------
 
-//Jordan's source file
-extern void showName();
-
 
 
 class Global {
@@ -741,8 +738,11 @@ void physics()
 }
 
 
-//My source file
-    
+ //Jordan's source file
+extern void showName();
+extern void drawBox(int x, int y);
+
+   
 void render()
 {
     //call function
@@ -762,6 +762,7 @@ void render()
 
 //call Jordan's source file	
     showName();
+    drawBox(gl.xres/2, gl.yres/2);
 	
 
 
